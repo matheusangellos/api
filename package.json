@@ -1,0 +1,25 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Repositório API criado para Testes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matheusangellos/api.git"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Matheus Angellos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matheusangellos/api/issues"
+  },
+  "homepage": "https://github.com/matheusangellos/api#readme",
+  "devDependencies": {
+    "cypress": "^4.9.0"
+  }
+}
