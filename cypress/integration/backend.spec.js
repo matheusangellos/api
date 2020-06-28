@@ -7,17 +7,17 @@ describe('Teste a nivel de API', () => {
             method: 'POST',
             url: 'https://jsonplaceholder.typicode.com/posts',
             body: {
-                title: 'foo',
-                body: 'bar',
-                userId: 1
+                title: 'Teste de API via POST',
+                body: 'Teste feito por Matheus Angellos',
+                userId: 90
             }
         }).then((response) => {
             expect(response.status).to.eq(201)            
+            expect(response.body).to.have.property('title', 'Teste de API via POST')
+            expect(response.body).to.have.property('body', 'Teste feito por Matheus Angellos')
+            expect(response.body).to.have.property('userId', 90)
             expect(response.body).to.have.property('id', 101)
-            expect(response.body).to.have.property('title', 'foo')
-            expect(response.body).to.have.property('body', 'bar')
-            expect(response.body).to.have.property('userId', 1)
-        })  
+        })
     })
 
     it('Requisição via método GET', () => {
@@ -36,27 +36,26 @@ describe('Teste a nivel de API', () => {
             url: 'https://jsonplaceholder.typicode.com/posts/1',
             body: {
                 id: 1,
-                title: 'foo',
-                body: 'bar',
-                userId: 1
+                title: 'Teste de API via PUT',
+                body: 'Teste feito por Matheus Angellos',
+                userId: 95
             },
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             }
         }).then((response) => {
-            expect(response.status).to.be.equal(200)
-            expect(response.body).to.have.property('body', 'bar')
+            expect(response.status).to.be.equal(200)            
             expect(response.body).to.have.property('id', 1)
-            expect(response.body).to.have.property('title', 'foo')
-            expect(response.body).to.have.property('userId', 1)
-
+            expect(response.body).to.have.property('title', 'Teste de API via PUT')
+            expect(response.body).to.have.property('body', 'Teste feito por Matheus Angellos')
+            expect(response.body).to.have.property('userId', 95)
         })
     })
 
     it('Requisição via método DELETE', () => {
         cy.request({
             method: 'DELETE',
-            url: 'https://jsonplaceholder.typicode.com/posts/1',
+            url: 'https://jsonplaceholder.typicode.com/posts/12131231',
             body: {}
         }).then((response) => {
             expect(response.status).to.be.equal(200)

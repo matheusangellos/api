@@ -20,6 +20,8 @@
   },
   "homepage": "https://github.com/matheusangellos/api#readme",
   "devDependencies": {
+    "concurrently": "^5.2.0",
     "cypress": "^4.9.0"
-  }
+  },
+  "cypress:ci": "concurrently \"cypress run\" --kill-others \"ng serve\" --success first"
 }
