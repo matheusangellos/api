@@ -11,4 +11,12 @@ Entrar no diretório do cypress e executar o mesmo:
 
     # npx cypress open
 
-Depois de aberto todos os testes aparecerao na tela, basta apenas selecionar um deles e ele será executado automáticamente
+Depois de aberto todos os testes aparecerao na tela, basta apenas selecionar um deles e ele será executado automáticamente.
+
+    Este repositório foi criado em caráter de testes, onde foi criado um arquivo de teste de API, que simula os principais métodos de requisição:
+    - GET
+    - POST
+    - PUT
+    - DELETE
+
+    Também foi testada a integração com o Jenkins.
